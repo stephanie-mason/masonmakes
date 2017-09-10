@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Sarpanch:400|Syncopate|VT323|Amatica+SC|Bungee+Hairline|Monofett|Press+Start+2P|Meddon');
+
+/*
+font-family: 'Sarpanch', sans-serif;
+font-family: 'Syncopate', sans-serif;
+font-family: 'VT323', monospace;
+
+font-family: 'Press Start 2P', cursive;
+font-family: 'Amatica SC', cursive;
+font-family: 'Monofett', cursive;
+font-family: 'Bungee Hairline', cursive;
+font-family: 'Comic Sans MS', cursive;
+*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+}
+header {
+  font-family: 'Syncopate', sans-serif;
+}
+h1 {
+  font-size: 4em;
+  margin: 0 0 1em;
+}
+.left-side {
+ width: 40%;
+ height: 100vh;
+ position: fixed;
+ left: 0;
+}
+.right-side {
+  background-image: url('images/hat.jpg');
+  background-size: cover;
+  width: 60%;
+  height: 100vh;
+  position: fixed;
+  left: 40%;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+.scroll-down {
+  background: aqua;
+  margin-bottom: 50vh;
+  display: none;
+}
+.secondary-nav {
+  text-align: center;
+  font-family: 'Bungee Hairline', cursive;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.secondary-nav li {
+  display: inline-block;
+}
+
+.main-nav {
+  background-image: url('images/whitespace.jpg');
+  background-size: cover;
+  background-position-y: 0%;
+  text-align: left;
+  cursor: help;
+}
+.main-nav li {
+  padding: 1em;
+  margin: 1em 0;
+  vertical-align: baseline;
+}
+.main-nav li:hover {
+  color: black;
+}
+
+.main-nav li:hover:nth-of-type(1) { background-color: red !important; }
+.main-nav li:hover:nth-of-type(2) { background-color: aqua !important; }
+.main-nav li:hover:nth-of-type(3) { background-color: aqua !important; }
+.main-nav li:hover:nth-of-type(4) { background-color: lime !important; }
+.main-nav li:hover:nth-of-type(5) { background-color: lime !important; }
+.main-nav li:hover:nth-of-type(6) { background-color: magenta !important; }
+.main-nav li:hover:nth-of-type(7) { background-color: red !important; }
+.main-nav li:hover:nth-of-type(8) { background-color: deeppink !important; }
+
+.stuff {
+  font-size: 1.5em;
+  display: none;
+}
+.main-nav li:nth-of-type(1) span { font-family: 'Amatica SC', cursive; }
+.main-nav li:nth-of-type(2) span { font-family: 'Monofett', cursive; }
+.main-nav li:nth-of-type(3) span { font-family: 'Sarpanch', sans-serif; }
+.main-nav li:nth-of-type(4) span { font-family: 'Bungee Hairline', cursive; }
+.main-nav li:nth-of-type(5) span { font-family: 'VT323', monospace; }
+.main-nav li:nth-of-type(6) span { font-family: 'Amatica SC', cursive; }
+.main-nav li:nth-of-type(7) span { font-family: 'Comic Sans MS', cursive; }
+.main-nav li:nth-of-type(8) span { font-family: 'Sarpanch', cursive; }
+
+section {
+  width: 80%;
+  min-height: 300px;
+  background: black;
+  color: white;
+  display: none;
+}
+section img {
+  max-width: 100%;
+}
+section:nth-of-type(odd) {
+  float: left;
+}
+section:nth-of-type(even) {
+  float: right;
+}
+/*
+.and {
+  font-size: 3em;
+  color: white;
+  position: absolute;
+  top: 450px;
+  left: 100px;
+  transform: rotate(-20deg);
+  background-color: magenta;
+  padding: 10px;
+}
+*/
+#art {}
+#science {
+  font-family: 'Sarpanch', sans-serif;
+  background: magenta;
+}
+#textiles {
+  background: cyan;
+}
+
+#about, #contact {
+  font-family: 'Amatica SC', cursive;
+  font-size: 2em;
+  line-height: 1.3em;
+  background: white;
+  color: black;
+  position: fixed;
+  width: 80%;
+  max-width: 600px;
+  top: 50%;
+  padding: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-indent: 30px;
+  cursor: crosshair;
+  display: none;
+}
+#contact {
+  text-align: center;
+}
+.close {
+  font-family: sans-serif;
+  background-color: white;
+  color: magenta;
+  border: 3px solid magenta;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-indent: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}

@@ -5,7 +5,17 @@ $(document).ready(function(){
     }
   }
 
-  $.preloadImages("images/hat.jpg","images/muzak.jpg","images/cyberpunk");
+  $.preloadImages("images/hat.jpg",
+  "images/muzak.jpg",
+  "images/cyberpunk",
+  "images/blackspace.jpg",
+  "images/fit.png",
+  "images/galaxy.jpg",
+  "images/glitchlich.jpg",
+  "images/pank.jpg",
+  "images/temporary.jpg",
+  "images/threedee.jpg",
+  "images/whitespace.jpg");
 
   $("#about-link").click(function(){ $("#about").show() });
   $("#contact-link").click(function(){ $("#contact").show() });
@@ -29,14 +39,14 @@ $(document).ready(function(){
   var design = new Section("fit.png", "red", "black", 6);
   var random = new Section("hat.jpg", "deeppink", "black", 7);
 
-  art["intersectSet"] = [textiles, random];
+  art["intersectSet"] = [textiles];
   science["intersectSet"] = [design];
   textiles["intersectSet"] = [art, electronics, design];
   code["intersectSet"] = [];
   electronics["intersectSet"] = [textiles];
   web["intersectSet"] = [design];
-  design["intersectSet"] = [science, web, random, textiles];
-  random["intersectSet"] = [art, design];
+  design["intersectSet"] = [science, web, textiles];
+  random["intersectSet"] = [];
 
 
   var sectionSet = [art, science, textiles, code, electronics, web, design, random];
@@ -130,7 +140,8 @@ $(document).ready(function(){
     }
   });
 
-  console.log("hey cutie");
+  console.log("hey cutie.");
+  console.log("I see u, peepin my back end ;)");
 
 
 });

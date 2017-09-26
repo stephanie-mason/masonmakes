@@ -24,13 +24,14 @@ header {
 }
 h1 {
   font-size: 4em;
-  margin: 0 0 1em;
+  margin: 0;
 }
 .left-side {
  width: 40%;
  height: 100vh;
  position: fixed;
  left: 0;
+ overflow-y: scroll;
 }
 .right-side {
   background-image: url('images/hat.jpg');
@@ -59,7 +60,6 @@ h1 {
 .secondary-nav li {
   display: inline-block;
 }
-
 .main-nav {
   background-image: url('images/whitespace.jpg');
   background-size: cover;
@@ -99,20 +99,26 @@ h1 {
 .main-nav li:nth-of-type(8) span { font-family: 'Sarpanch', cursive; }
 
 section {
-  width: 80%;
-  min-height: 300px;
-  background: black;
-  color: white;
+  height: 100vh;
+  width: 100%;
   display: none;
 }
-section img {
-  max-width: 100%;
+section p {
+  line-height: 1.2em;
+  margin-top: 10px;
 }
-section:nth-of-type(odd) {
+section img {
+  width: 100%;
+}
+section div {
+  width: 80%;
+}
+section div:nth-of-type(odd) {
   float: left;
 }
-section:nth-of-type(even) {
+section div:nth-of-type(even) {
   float: right;
+  text-align: right;
 }
 /*
 .and {
@@ -126,13 +132,46 @@ section:nth-of-type(even) {
   padding: 10px;
 }
 */
-#art {}
-#science {
-  font-family: 'Sarpanch', sans-serif;
-  background: magenta;
+#art p{
+  background: deeppink;
+  color: cyan;
+  text-shadow: 0px 0px 3px white;
+  font-family: 'Amatica SC', sans-serif;
+  font-size: 1.7em;
 }
-#textiles {
+
+#science {
+  height: 200px;
+  background: white;
+  font-family: 'Sarpanch', sans-serif;
+  text-shadow: 0px 0px 3px cyan;
+}
+#science h2 {
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+#textiles p{
+  position: absolute;
+  top: -20px;
   background: cyan;
+  font-family: 'Monofett', cursive;
+  font-size: 1.6em;
+}
+#code div {
+  float: left;
+  text-align: left;
+}
+#code p {
+  background: black;
+  color: lime;
+  font-family: 'Bungee Hairline', cursive;
+  margin: 0;
+}
+#code a {
+  color: blueviolet;
+}
+#electronics p {
+  background: lime;
 }
 
 #about, #contact {
@@ -155,6 +194,46 @@ section:nth-of-type(even) {
 #contact {
   text-align: center;
 }
+#web p{
+  background: white;
+  font-family: 'VT323', monospace;
+}
+#design p {
+  background: red;
+  color: white;
+  font-family: 'Amatica SC', cursive;
+  font-size: 1.1em;
+}
+#random p {
+  font-family: 'Sarpanch', sans-serif;
+  color: white;
+  text-shadow: 0px 0px 3px deeppink;
+}
+#art-textiles p {
+  background: blueviolet;
+  color: lime;
+  font-size: 1.4em;
+  font-family: 'Amatica SC', cursive;
+}
+#science-design p {
+  color: white;
+}
+#textiles-electronics p {
+  font-family: 'comic sans ms', cursive;
+  background: black;
+  color: magenta;
+  text-shadow: 0px 0px 5px cyan;
+}
+#textiles-design p {
+  font-family: 'VT323', monospace;
+  background: white;
+  text-shadow: 0px 0px 3px deeppink;
+}
+#web-design p {
+  font-family: 'Comic Sans MS', cursive;
+  background: black;
+  color: red;
+}
 .close {
   font-family: sans-serif;
   background-color: white;
@@ -167,4 +246,41 @@ section:nth-of-type(even) {
   width: 40px;
   height: 40px;
   text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 2em;
+  }
+  .scroll-down {
+    position: fixed;
+    z-index: -1;
+    top: 34px;
+    font-size: .6em;
+    width: 100vw;
+    text-align: center;
+  }
+  .left-side {
+   width: 100%;
+   height: 100vh;
+   left: 0;
+   overflow-y: hidden;
+  }
+  .right-side {
+    display: none;
+  }
+  .content {
+    width: 100vw;
+    left: 0;
+    top: 97vh;
+  }
+  section div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .scroll-down { 
+    top: 65px;
+  }
 }
